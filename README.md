@@ -50,10 +50,6 @@ This is a clone of Apple's iPhone 15 Pro website using React.js and TailwindCSS.
 and many more, including code architecture and reusability 
 
 <hr>
-## <a name="links">🔗 Links</a>
-
-Public Assets used in the project can be found [here](https://drive.google.com/file/d/1syHiNxSIGXVApaIozdrLXM2x5dPhvaJL/view?usp=sharing)
-
 <hr>
 
 
