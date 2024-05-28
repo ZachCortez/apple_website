@@ -3,7 +3,7 @@
 <div align="center">
   <br />
  <a>
-   <img src="https://i.postimg.cc/37PnQw8n/Image-from.png" alt="Project Banner">
+  <a href="https://ibb.co/ryVCfWB"><img src="https://i.ibb.co/bdkSRf4/Screenshot-2024-05-26-024820.png" alt="Screenshot-2024-05-26-024820" border="0"></a>
  </a>
       
   <br />
