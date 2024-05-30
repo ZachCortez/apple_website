@@ -1,7 +1,7 @@
 import { useGSAP } from "@gsap/react"
 import { animateWithGsap } from "../utils/animations";
 import { explore1Img, explore2Img, exploreVideo } from "../utils";
-import { useRef } from "react";
+import React, { useRef } from "react";
 import gsap from "gsap";
 
 const Features = () => {
@@ -9,13 +9,15 @@ const Features = () => {
 
   useGSAP(() => {
     gsap.to('#exploreVideo', {
-      scrollTrigger: {
-        trigger: '#exploreVideo',
-        toggleActions: 'play pause reverse restart',
-        start: '-%10 bottom',
+      scrollTrigger:{
+        trigger:'#exploreVideo',
+        toggleActions: 'restart none none none',
+        onToggle: () => setVideo(prev => ({ ...prev, startPlay: true, isPlaying: true }))
+        // start: '-%10 bottom',
       },
       onComplete: () => {
        videoRef.current.play();
+      // setVideo(prev => ({ ...prev, startPlay: true, isPlaying: true }))
       }
     })
 
@@ -39,6 +41,7 @@ const Features = () => {
             Explore the full story.
           </h1>
         </div>
+        
         <div className="flex flex-col justify-center items-center overflow-hidden">
           <div className="mt-32 mb-24 pl-24">
             <h2 className="text-5xl lg:text-7xl font-semibold">iPhone.</h2>
@@ -47,7 +50,7 @@ const Features = () => {
 
           <div className="flex-center flex-col sm:px-10">
             <div className="relative h-[50vh] w-full flex items-center">
-              <video playsInline id="exploreVideo" className="w-full h-full object-cover" preload="none" muted autoPlay ref={videoRef}>
+              <video playsInline id="exploreVideo" className="w-full h-full object-cover object-center" preload="none" muted autoPlay ref={videoRef}>
                 <source src={exploreVideo} type="video/mp4"/>
               </video>
             </div>
@@ -58,7 +61,7 @@ const Features = () => {
                   <img src={explore1Img} alt="titanium" className="feature-video g_grow" />
                 </div>
                 <div className="overflow-hidden flex-1 h-[50vh]">
-                  <img src={explore2Img} alt="titanium2" className="feature-video g_grow" />
+                  <img src={explore2Img} alt="titanium 2" className="feature-video g_grow" />
                 </div>
               </div>
 
