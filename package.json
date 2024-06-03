@@ -13,6 +13,7 @@
     "@gsap/react": "^2.1.1",
     "@react-three/drei": "^9.105.6",
     "@react-three/fiber": "^8.16.6",
+    "@sentry/browser": "^8.7.0",
     "@sentry/react": "^8.5.0",
     "@sentry/vite-plugin": "^2.17.0",
     "gsap": "^3.12.5",
